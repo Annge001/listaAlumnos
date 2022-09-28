@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentsComponent implements OnInit {
 
+  listaAlumnos: Array<string> = ['alumno uno','alumno dos','alumno tres','alumno cuatro','alumno cinco'];
+
   constructor() { }
 
   ngOnInit(): void {

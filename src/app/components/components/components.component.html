@@ -1,7 +1,7 @@
 <div>
-<ol>
-  <li *ngFor="let nombre of listaAlumnos">
-    {{nombre}}
-  </li>
-</ol>
+  <ol>
+    <li *ngFor="let nombre of listaAlumnos; index as posicion">
+      {{nombre}}
+    </li>
+  </ol>
 </div>

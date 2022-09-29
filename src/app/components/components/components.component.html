@@ -1,5 +1,19 @@
-<div>
-  <h1>Lista de alumnos</h1>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+<div class="title col-12">
+  <h1><b>Lista de alumnos</b></h1>
 </div>
 <div class="container mt-5">
   <div class="row g-3">
@@ -19,10 +33,18 @@
               ingreso:</b> {{alumno.cursos.fechaIngreso  | date: "shortDate"}} <br>
           <p *ngIf="alumno.cursos.estadoCurso === 'Aprobado'"><b>Fecha de
             Egreso:</b> {{alumno.cursos.fechaEgreso  | date: "shortDate"}}<br></p>
-          <p > <b>Estado del curso: </b> <span [ngClass]="alumno.cursos.estadoCurso === 'Reprobado' ? 'color' : 'bg-danger'">{{alumno.cursos.estadoCurso}}</span></p>
+          <p > <b>Estado del curso: </b>
+            <span *ngIf="alumno.cursos.estadoCurso === 'Reprobado'" class="color-reprobado">{{alumno.cursos.estadoCurso}}</span>
+            <span *ngIf="alumno.cursos.estadoCurso === 'Aprobado'" class="color-aprobado">{{alumno.cursos.estadoCurso}}</span>
+            <span *ngIf="alumno.cursos.estadoCurso === 'Cursando'" class="color-cursando">{{alumno.cursos.estadoCurso}}</span>
+
+          </p>
 
         </li>
       </ol>
     </div>
   </div>
+</div>
+<div>
+  <button class="btn btn-primary">Probando bootstrap</button>
 </div>

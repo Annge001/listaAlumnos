@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Alumnos} from '../../models/alumnos'
-import {Curso} from '../../models/curso'
+import {Alumnos} from '../models/alumnos'
+import {Curso} from '../models/curso'
 
 
 
@@ -57,6 +57,7 @@ export class ComponentsComponent implements OnInit {
 
     }
   ];
+  isListAproved:boolean=true;
 
   constructor() {}
 
@@ -64,4 +65,12 @@ export class ComponentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cambiarAlumnos() {
+
+    if(this.isListAproved){
+      this.isListAproved = false;
+    }else{
+      this.isListAproved = true;
+    }
+  }
 }

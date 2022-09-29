@@ -43,7 +43,7 @@ export class ComponentsComponent implements OnInit {
       apellido: 'Marmol',
       edad: 28,
       fechaNacimiento: new Date('11/12/1994'),
-      img:'https://2img.net/r/ihimizer/img838/3904/picapi40.gif',
+      img:'https://2img.net/r/ihimizer/img838/3904/picapi40.gif ',
       cursos:{inicioCurso: new Date ("06/25/2019"), estadoCurso: 'Aprobado', fechaIngreso:new Date ("06/25/2019"), fechaEgreso: new Date("09/18/2022"), nombreCurso: 'Alemán'}
 
     },

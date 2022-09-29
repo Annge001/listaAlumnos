@@ -1,7 +1,28 @@
 <div>
-  <ol>
-    <li *ngFor="let nombre of listaAlumnos; index as posicion">
-      {{nombre}}
-    </li>
-  </ol>
+  <h1>Lista de alumnos</h1>
+</div>
+<div class="container mt-5">
+  <div class="row g-3">
+    <div>
+      <ol>
+        <li *ngFor="let alumno of listaAlumnos; index as posicion">
+          <div>
+            <img src="{{alumno.img}}" class="card-img-top" alt="">
+          </div>
+          <p><b>Nombre:</b> {{alumno.nombre}} <br> <b>Apellido: </b>{{alumno.apellido}} <br>
+            <b>Edad: </b> {{alumno.edad}}
+            <br>
+            <b>Fecha de nacimiento: </b>{{alumno.fechaNacimiento | date : "shortDate"}}</p>
+
+          <p><b>Curso:</b> {{alumno.cursos.nombreCurso}}<br>
+            <b>Inicio del curso:</b> {{alumno.cursos.inicioCurso  | date: "shortDate"}} <br> <b>Fecha de
+              ingreso:</b> {{alumno.cursos.fechaIngreso  | date: "shortDate"}} <br>
+          <p *ngIf="alumno.cursos.estadoCurso === 'Aprobado'"><b>Fecha de
+            Egreso:</b> {{alumno.cursos.fechaEgreso  | date: "shortDate"}}<br></p>
+          <p > <b>Estado del curso: </b> <span [ngClass]="alumno.cursos.estadoCurso === 'Reprobado' ? 'color' : 'bg-danger'">{{alumno.cursos.estadoCurso}}</span></p>
+
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>

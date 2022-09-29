@@ -1,7 +1,7 @@
 img{
-border-image-repeat: stretch;
-  max-height: 30%;
-  max-width: 30%;
+  border-image-repeat: stretch;
+  max-height: 75%;
+  max-width: 75%;
 }
 .color-reprobado{
   color: indianred;
@@ -31,3 +31,15 @@ border-image-repeat: stretch;
   width: 30%;
   height: 10%;
 }
+.nav-item{
+
+}
+.flex-column{
+  background-color: darkgray;
+  width: 40%;
+  font-size: xx-large;
+}
+.div-toolbar{
+  position: fixed;
+}
+
